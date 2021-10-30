@@ -1,0 +1,43 @@
+jenkins
+----------
+
+various stages 
+
+1- code review 
+2- unit test
+3- code coverage
+4-package
+
+all the steps performed by maven
+
+we can direcly package the code without help of jenkins by using maven
+
+root@ip-172-31-22-222:~/samplejavaapp#  /opt/apache-maven-3.8.3/bin/mvn package
+
+
+CI PIPELINE:- if we execute various stages of build code process in a sequentail manner thats called " continous integration pipeline"
++++++++
+home directory paths of java , maven , jenkins:-
+
+
+java:-  /usr/lib/jvm/java-1.11.0-openjdk-amd64
+
+
+maven:- /opt/apache-maven-3.8.3
+
+jenkins:- /var/lib/jenkins
+
+++++++++
+
+package
+
+code-review:- -P metrics pmd:pmd  ( programme mistake detector)--- under jenkins home -- /var/lib/jenkins/workspace/code-review/target -pmd.xml
+so jenkins cant understand that file we can use plugin to see that (	
+Warnings Next Generation) -plugin name
+
+unit test: goals: - test
+
+xml :- target/surefire-reports/*.xml (post build) 
+
+-- this unit-test job will execute various test cases ( actualy these test cases will given by developers in source code according to that it will give the results) 
+

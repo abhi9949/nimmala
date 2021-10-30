@@ -1,0 +1,26 @@
+paramerrized builds in jenkins 
+
+jenkins varianles, what are frequesnt variables using 
+
+plugins
+
+declarative pipeline and non declarative piepline
+
+jenkins home migration
+
+---------
+
+anisible dyanamic inventory 
+
+anisbile role create
+
+--------
+
+aws
+
+how to trobleshhhot if we lost the keys (how to restore that keys ) 
+
++++++++
+
+cd /tmp ; sudo wget http://apachemirror.wuchna.com/maven/maven-3/3.8.3/binaries/apache-maven-3.8.3-bin.tar.gz
+

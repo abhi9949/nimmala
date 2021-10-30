@@ -1,0 +1,12 @@
+admin
+wordpress143
+
+user-admin
+
+wordpress.cosi9vovbx4a.us-east-1.rds.amazonaws.com
+apt-get install apache2 php php-mysql php-curl mysql-client libapache2-mod-php unzip
+
+
+cp wp-config-sample.php wp-config.php
+
+http://3.83.184.245/wp-admin/install.php

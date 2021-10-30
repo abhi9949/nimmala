@@ -1,0 +1,19 @@
+buidling our own image 
++++++++++
+
+FROM ubuntu
+RUN apt-get -y update
+RUN apt-get -y install openjdk-8-jdk wget
+RUN mkdir /opt/tomcat
+# COPY tomcat-8.5.37.tar.gz /tmp
+# RUN cd /tmp && tar xvfz tomcat-8.5.37.tar.gz
+# RUN mv /tmp/apache-tomcat-8.5.37/* /opt/tomcat/
+# RUN rm /tmp/tomcat-8.5.37.tar.gz
+ADD apache-tomcat-8.5.37.tar.gz /root
+RUN mv /root/apache-tomcat-8.5.37/* /opt/tomcat/
+COPY sampleapp.war /root
+EXPOSE 8090
+ENTRYPOINT ["/opt/tomcat/bin/catalina.sh", "run"]  ## JSON Format
+# ENTRYPOINT /opt/tomcat/bin/catalina.sh run  ## Shell Format
+----
+

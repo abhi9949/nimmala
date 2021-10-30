@@ -1,0 +1,25 @@
+jenkins error -- if any certificate relate try below command
+
+sudo apt install ca-certificates
+
+then install jenkins commands it will work
+
+ wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+ sudo sh -c 'echo deb https://pkg.jenkins.io/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
+  sudo apt-get update
+  sudo apt-get install jenkins
+++++
+curl -v localhost:8090/sampleapp
++++++++
+
+cd /var/lib/jenkins/workspace/workspace
+sudo docker build --file --tag abilashnimmala/nimmala:$BUILD_NUMBER
+sudo docker login -u abhilashnimmala -p
+sudo docker push abhilashnimmala/nimmala:$BUILD_NUMBER
+
+
++++
+
+
+
+sudo hostnamectl set-hostname "k8-master"
